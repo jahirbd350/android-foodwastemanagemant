@@ -15,7 +15,7 @@ TextView gotoregister;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        loginbtn = findViewById(R.id.loginuser);
+        loginbtn = findViewById(R.id.login);
         gotoregister = findViewById(R.id.gotoregister);
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override

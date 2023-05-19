@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".Login">
+    tools:context=".Register">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -39,7 +38,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/circle"
                     android:padding="8dp"
-                    android:src="@drawable/form" />
+                    android:src="@drawable/fooddonation" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -47,7 +46,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="LOGIN"
+                    android:text="Donate Food"
                     android:textColor="@color/white"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -78,7 +77,7 @@
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
                     android:padding="8dp"
-                    android:src="@drawable/user"/>
+                    android:src="@drawable/foodtype"/>
 
                 <EditText
                     android:layout_width="match_parent"
@@ -87,7 +86,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/imgViewUserIcon"
                     android:background="@color/editTextBG"
-                    android:hint="Username/ Phone No"
+                    android:hint="Food Name/ Type"
                     android:paddingLeft="10dp"
                     android:textSize="15sp" />
             </RelativeLayout>
@@ -107,7 +106,7 @@
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
                     android:padding="8dp"
-                    android:src="@drawable/padlock" />
+                    android:src="@drawable/description" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -116,13 +115,13 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/imgViewPass"
                     android:background="@color/editTextBG"
-                    android:hint="Password"
+                    android:hint="Food Description"
                     android:textSize="15sp"
                     android:paddingLeft="10dp"
                     tools:ignore="TouchTargetSizeCheck" />
             </RelativeLayout>
 
-            <!--<RelativeLayout
+            <RelativeLayout
                 android:id="@+id/relativeView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -137,7 +136,7 @@
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
                     android:padding="8dp"
-                    android:src="@drawable/gmail" />
+                    android:src="@drawable/quantity" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -146,7 +145,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/imgEmail"
                     android:background="@color/editTextBG"
-                    android:hint="Email Address"
+                    android:hint="Food Quantity"
                     android:textSize="15sp"
                     android:paddingLeft="10dp" />
             </RelativeLayout>
@@ -166,7 +165,7 @@
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
                     android:padding="8dp"
-                    android:src="@drawable/phone" />
+                    android:src="@drawable/address" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -175,7 +174,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/imgPhone"
                     android:background="@color/editTextBG"
-                    android:hint="Phone No"
+                    android:hint="Detail Address"
                     android:textSize="15sp"
                     android:paddingLeft="10dp" />
             </RelativeLayout>
@@ -195,7 +194,7 @@
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
                     android:padding="8dp"
-                    android:src="@drawable/address"/>
+                    android:src="@drawable/citymap"/>
 
                 <EditText
                     android:layout_width="match_parent"
@@ -204,12 +203,12 @@
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/imgaddress"
                     android:background="@color/editTextBG"
-                    android:hint="Address"
+                    android:hint="City/ Area"
                     android:textSize="15sp"
                     android:paddingLeft="10dp" />
             </RelativeLayout>
 
-            <CheckBox
+            <!--<CheckBox
                 android:id="@+id/chkBox1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -221,22 +220,24 @@
                 android:fontFamily="sans-serif-medium"
                 android:textColor="@color/textColor" />-->
 
-            <Button
-                android:id="@+id/login"
-                android:layout_below="@id/relativeView2"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/relativeView5"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
-                android:backgroundTint="@color/colorPrimary"
+                android:layout_marginBottom="20dp"
+                app:cornerRadius="10dp"
+                app:backgroundTint="@color/colorPrimary"
                 android:fontFamily="sans-serif-medium"
-                android:text="Login"
+                android:text="Donate Food"
                 android:textColor="@color/white" />
 
-            <Button
-                android:id="@+id/gotoregister"
-                android:layout_below="@id/login"
+            <!--<Button
+                android:id="@+id/gotologin"
+                android:layout_below="@id/register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -244,55 +245,13 @@
                 android:layout_marginBottom="15dp"
                 android:textAllCaps="false"
                 android:background="@color/transparent"
-                android:text="Don't have an account? Signup Here"
+                android:text="Already a member? Login Here"
                 android:fontFamily="sans-serif-medium"
-                android:textColor="@color/textColor"/>
+                android:textColor="@color/textColor"
+                android:textSize="15sp"/>-->
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <!--<LinearLayout
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#7003DAC5"
-        android:orientation="vertical">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#A9F5AF22"
-            android:hint="Login_ID"
-            android:textSize="25sp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#A9F5AF22"
-            android:hint="Enter Password"
-            android:textSize="25dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            />
-        <Button
-            android:id="@+id/loginuser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Login" />
-
-        <TextView
-            android:id="@+id/gotoregister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register Here"
-            android:layout_gravity="center"
-            android:background="#5CF5AF22"
-            android:layout_marginTop="10dp"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-    </LinearLayout>-->
 
 </RelativeLayout>
