@@ -80,6 +80,7 @@
                     android:src="@drawable/user"/>
 
                 <EditText
+                    android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/imgViewUserIcon"
@@ -87,6 +88,8 @@
                     android:layout_toRightOf="@id/imgViewUserIcon"
                     android:background="@color/editTextBG"
                     android:hint="Username"
+                    android:maxLines="1"
+                    android:inputType="text"
                     android:paddingLeft="10dp"
                     android:textSize="15sp" />
             </RelativeLayout>
@@ -101,24 +104,26 @@
                 android:layout_marginRight="30dp">
 
                 <ImageView
-                    android:id="@+id/imgViewPass"
+                    android:id="@+id/imgEmail"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
                     android:padding="8dp"
-                    android:src="@drawable/padlock" />
+                    android:src="@drawable/gmail" />
 
                 <EditText
+                    android:id="@+id/emailaddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/imgViewPass"
+                    android:layout_alignBottom="@id/imgEmail"
                     android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@id/imgViewPass"
+                    android:layout_toRightOf="@id/imgEmail"
                     android:background="@color/editTextBG"
-                    android:hint="Password"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email Address"
                     android:textSize="15sp"
-                    android:paddingLeft="10dp"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    android:paddingLeft="10dp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -131,24 +136,30 @@
                 android:layout_marginRight="30dp">
 
                 <ImageView
-                    android:id="@+id/imgEmail"
+                    android:id="@+id/imgViewPass"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@color/colorPrimary"
                     android:padding="8dp"
-                    android:src="@drawable/gmail" />
+                    android:src="@drawable/padlock" />
 
                 <EditText
+                    android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@id/imgEmail"
+                    android:layout_alignBottom="@id/imgViewPass"
                     android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@id/imgEmail"
+                    android:layout_toRightOf="@id/imgViewPass"
                     android:background="@color/editTextBG"
-                    android:hint="Email Address"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
                     android:textSize="15sp"
-                    android:paddingLeft="10dp" />
+                    android:paddingLeft="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
             </RelativeLayout>
+
+
 
             <RelativeLayout
                 android:id="@+id/relativeView4"
@@ -168,6 +179,7 @@
                     android:src="@drawable/phone" />
 
                 <EditText
+                    android:id="@+id/phoneno"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/imgPhone"
@@ -176,6 +188,7 @@
                     android:background="@color/editTextBG"
                     android:hint="Phone No"
                     android:textSize="15sp"
+                    android:maxLines="1"
                     android:paddingLeft="10dp" />
             </RelativeLayout>
 
@@ -197,6 +210,7 @@
                     android:src="@drawable/address"/>
 
                 <EditText
+                    android:id="@+id/address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/imgaddress"
@@ -205,6 +219,7 @@
                     android:background="@color/editTextBG"
                     android:hint="Address"
                     android:textSize="15sp"
+                    android:maxLines="1"
                     android:paddingLeft="10dp" />
             </RelativeLayout>
 
@@ -220,7 +235,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:textColor="@color/textColor" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/register"
                 android:layout_below="@id/chkBox1"
                 android:layout_width="match_parent"
@@ -231,11 +246,24 @@
                 android:backgroundTint="@color/colorPrimary"
                 android:fontFamily="sans-serif-medium"
                 android:text="Sign Up"
+                app:cornerRadius="10dp"
                 android:textColor="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_below="@id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                />
 
             <Button
                 android:id="@+id/gotologin"
-                android:layout_below="@id/register"
+                android:layout_below="@id/progressbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"

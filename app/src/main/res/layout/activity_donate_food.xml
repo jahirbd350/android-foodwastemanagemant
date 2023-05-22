@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".Register">
 
     <androidx.cardview.widget.CardView
@@ -226,7 +227,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/relativeView5"
                 android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
                 app:cornerRadius="10dp"

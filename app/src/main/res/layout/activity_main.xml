@@ -20,7 +20,9 @@
                 android:id="@+id/topArea"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="@color/colorPrimary" >
+                android:background="@color/colorPrimary"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp">
 
                 <TextView
                     android:id="@+id/myDashboard"
@@ -36,14 +38,13 @@
                     android:id="@+id/dashboard_adminName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ali Raza"
+                    android:text="Md Jahirul Islam"
                     android:textSize="15sp"
                     android:layout_below="@id/myDashboard"
                     android:layout_alignEnd="@id/myDashboard"
                     android:layout_marginTop="-20dp"
                     android:textStyle="bold"
                     android:textColor="@color/white" />
-
 
                 <ImageView
                     android:layout_width="70dp"
@@ -62,9 +63,7 @@
                 android:layout_height="match_parent"
                 android:columnCount="2"
                 android:layout_marginTop="-80dp"
-                android:paddingStart="20dp"
-                android:layout_marginStart="10dp"
-                >
+                android:layout_marginStart="10dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/driverManager"
@@ -72,23 +71,20 @@
                     android:layout_height="150dp"
                     android:layout_margin="10dp"
                     app:cardElevation="7dp"
-                    app:cardCornerRadius="10dp"
-                    >
+                    app:cardCornerRadius="10dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:layout_margin="2dp"
-                        android:padding="10dp"
-                        >
+                        android:padding="10dp">
 
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:src="@drawable/searchfood"
-                            android:layout_gravity="center_horizontal|center_vertical"
-
-                            />
+                            android:layout_gravity="center_horizontal|center_vertical"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -97,8 +93,7 @@
                             android:textSize="15sp"
                             android:layout_marginTop="5dp"
                             android:layout_gravity="center_horizontal"
-                            android:textStyle="bold"
-                            />
+                            android:textStyle="bold" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -303,7 +298,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/register"
+                            android:src="@drawable/logout"
                             android:layout_gravity="center_horizontal|center_vertical"
 
                             />

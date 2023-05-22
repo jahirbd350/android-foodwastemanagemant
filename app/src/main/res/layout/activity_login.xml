@@ -81,14 +81,17 @@
                     android:src="@drawable/user"/>
 
                 <EditText
+                    android:id="@+id/emailaddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/imgViewUserIcon"
                     android:layout_alignParentTop="true"
                     android:layout_toRightOf="@id/imgViewUserIcon"
                     android:background="@color/editTextBG"
-                    android:hint="Username/ Phone No"
+                    android:hint="Email / Phone No"
                     android:paddingLeft="10dp"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
                     android:textSize="15sp" />
             </RelativeLayout>
 
@@ -110,6 +113,7 @@
                     android:src="@drawable/padlock" />
 
                 <EditText
+                    android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/imgViewPass"
@@ -117,6 +121,8 @@
                     android:layout_toRightOf="@id/imgViewPass"
                     android:background="@color/editTextBG"
                     android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
                     android:textSize="15sp"
                     android:paddingLeft="10dp"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -234,9 +240,20 @@
                 android:text="Login"
                 android:textColor="@color/white" />
 
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_below="@id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
             <Button
                 android:id="@+id/gotoregister"
-                android:layout_below="@id/login"
+                android:layout_below="@id/progressbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
